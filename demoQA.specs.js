@@ -13,10 +13,12 @@ describe("Form filling and submitting", () => {
             // failing the test
             return false
         })
+	    
 	// open the webpage
         cy.visit("https://demoqa.com/");
-        //assert the url
+        // assert the url
 	cy.url().should("include", "https://demoqa.com/");
+	    
         // fill and submit the form
         cy.get(".card.mt-4.top-card:first-child").click();
         cy.get("#item-0").click();
@@ -25,7 +27,8 @@ describe("Form filling and submitting", () => {
         cy.get("#currentAddress").clear().type(userDetails.currAddress);
         cy.get("#permanentAddress").clear().type(userDetails.permAddress);
         cy.get("#submit").click();
-
+	    
+	// assert submitted data
         cy.get("p#name").should("have.text", `Name:${userDetails.name}`)
         cy.get("p#email").should("have.text", `Email:${userDetails.email}`)
         cy.get("p#currentAddress").should("have.text", `Current Address :${userDetails.currAddress} `)
