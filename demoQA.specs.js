@@ -14,6 +14,9 @@ describe("Form filling", () => {
             return false
         })
         cy.visit("https://demoqa.com/");
+        //assert the url
+		cy.url().should("include", "https://demoqa.com/");
+        
         cy.get(".card.mt-4.top-card:first-child").click();
         cy.get("#item-0").click();
         cy.get("#userName").clear().type(userDetails.name);
