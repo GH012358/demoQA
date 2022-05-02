@@ -1,6 +1,6 @@
 describe("Form filling and submitting", () => {
 
-    it("Open the webpage", () => {
+    it("Open the webpage, fill and submit the form, assert submitted data.", () => {
         let userDetails = {
             name: "JohnDoe",
             email: "johndoe@gmail.com",
