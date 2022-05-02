@@ -13,11 +13,11 @@ describe("Form filling and submitting", () => {
             // failing the test
             return false
         })
-	    
+	// open the webpage
         cy.visit("https://demoqa.com/");
         //assert the url
 	cy.url().should("include", "https://demoqa.com/");
-        
+        // fill and submit the form
         cy.get(".card.mt-4.top-card:first-child").click();
         cy.get("#item-0").click();
         cy.get("#userName").clear().type(userDetails.name);
