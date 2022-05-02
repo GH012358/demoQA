@@ -1,4 +1,4 @@
-describe("Form filling", () => {
+describe("Form filling and submitting", () => {
 
     it("Open the webpage", () => {
         let userDetails = {
